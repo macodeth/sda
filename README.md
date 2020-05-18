@@ -9,7 +9,7 @@
 
 ### CHARACTERISTICS:
 
-Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) in many operations in terms of both **execution time** and **memory usage**. Moreover, **SDA** is easier to implement than 'typical' C++ deque. This picture below will explain general concepts of this data structure:
+This picture below will explain general concepts of this data structure:
 
 ![](./image/sda.png)
 
@@ -120,9 +120,9 @@ Contact: duythan@protonmail.com
 
 #### NOTE:
 
-1. This library is in development (need more testing, documentation, refactoring, ...). All functions are complete. I can only guarantee it work correctly with primitive data types (see **/test/check_result.cpp**)
+This library is in development (need more testing, documentation, refactoring, ...). All functions are complete. I can only guarantee it work correctly with primitive data types (see **/test/check_result.cpp**)
 
-2. Speed of **sda**  can be improved even further. **sda** defeats C++ vector because it has better algorithms, not because of any platform-specific features or other non-standard libraries
+
 
    
 
