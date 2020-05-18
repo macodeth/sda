@@ -57,7 +57,8 @@ back   : empty_front_capacity() + back_capacity() * 1.25 + 2
 
 - only run **one** operation on **one** container each test
 
-
+<br/>
+<br/>
 
 ## int
 
@@ -86,6 +87,7 @@ note:
   2. there's always some minor difference between tests we run each time (some seconds may seem large but in total serveral minutes, it's very small)
 <br/>
 <br/>
+
 **2. MULTIPLE INSERT**
 
 ​		value = 0xCAFE
@@ -104,6 +106,7 @@ note:
 note: same as single insert
 <br/>
 <br/>
+
 **3. SINGLE DELETE**
 
 ​		value = 0xDEAD
@@ -120,6 +123,7 @@ note: same as single insert
 note: this test is obvious. sda moves smaller amount of elements, it also benifits from its contiguous memory layout.
 <br/>
 <br/>
+
 **4. RANGE DELETE**
 
 ​		value = 0xBA5E
@@ -137,6 +141,7 @@ note: this test is obvious. sda moves smaller amount of elements, it also benifi
 *ratio = random_range.size / current_array.size : delete a random range has size equals to *ratio* of current array's size (range maybe empty)
 <br/>
 <br/>
+
 **5. PUSH BACK**
 
 ​		value = 0x50DA
@@ -165,6 +170,7 @@ note: sda uses default growth formula, so (obviously) pushing elements into it i
 note: same as **PUSH BACK**
 <br/>
 <br/>
+
 **7. POP BACK**
 
 ​		value = 0xD1CE
@@ -176,6 +182,7 @@ note: same as **PUSH BACK**
 | deque  | 0.210624    | 0.316784    | 0.423526    | 0.527724    | 0.63352     |
 <br/>
 <br/>
+
 **8. POP FRONT**
 
 ​		value = 0x5EED
@@ -186,6 +193,7 @@ note: same as **PUSH BACK**
 | deque | 0.228291    | 0.342578    | 0.456481    | 0.571723    | 0.686627    |
 <br/>
 <br/>
+
 **9. ACCESS and ASSIGN**
 
 ​		value = 0xFEED
