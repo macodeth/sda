@@ -3,8 +3,9 @@
 **SDA** is a dynamic array, which can reserve memory at both ends, makes it also a (partly) double ended queue. 
 
 
-
-
+<br/>
+<br/>
+<br/>
 
 ### CHARACTERISTICS:
 
@@ -21,7 +22,8 @@ Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) i
    Only grows memory in respective pushing direction. Generally with the default growth rate, pushing into **SDA** will be slower than normal dynamic array without reserved memory
 
 ![](./image/push.png)
-
+<br/>
+<br/>
 2. **VERY FAST INSERT / ERASE** 
 
    Random insert/erase is the true strength of this data structure 
@@ -29,7 +31,8 @@ Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) i
    Never moves more than half array (except when reallocation is needed and **join** functions) 
    
    ![](./image/insert.png)
-
+<br/>
+<br/>
 3. **FLEXIBLE GROWTH FORMULA**
 
    Two growth formulas can be changed any time. 
@@ -43,7 +46,8 @@ Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) i
    
    (and vice versa)
 
-
+<br/>
+<br/>
 
 4. **SYMMETRIC DATA STRUCTURE**
 
@@ -69,8 +73,10 @@ Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) i
    time2 = 7.48983 s
    ```
    
-   
-
+<br/>  
+<br/>
+<br/>
+<br/>
 
 
 ### IMPLEMENTATION
@@ -85,7 +91,9 @@ If you want to check those test cases, I suggest choosing a big case, so that th
 
 - #### INSTALL:
 
-1. Compiler: Require **C++17** support :         **g++ 7.5.0**            **clang 6.0.0**
+1. Compiler: Require **C++17** support :         
+     **g++ 7.5.0**            
+     **clang 6.0.0**
 2. Include **sda.h** in your program/project and use.
 
 - #### GUIDE:
