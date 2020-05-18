@@ -15,6 +15,7 @@ Using smart mechanisms, **SDA** outperforms standard dynamic array (and deque) i
 
 
 1. **SMART PUSH / POP**
+
    Using 4 pointers to keep track of memory 
 
    Only grows memory in respective pushing direction. Generally with the default growth rate, pushing into **SDA** will be slower than normal dynamic array without reserved memory
