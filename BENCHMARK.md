@@ -1,9 +1,9 @@
-**computer** : Dell Inspiron 15 3000 Series
-**processor** : Intel® Core™ i5-7200U CPU @ 2.50GHz × 4 
-**os**             : Ubuntu 18.04.4 LTS 64-bit
-**compiler** : g++ 7.5.0
-**compile** : g++ -O2 -std=c++17 -Wpedantic -Wall -Wextra -Werror
-**method**  : clock() function from time.h
+**computer** : Dell Inspiron 15 3000 Series <br/>
+**processor** : Intel® Core™ i5-7200U CPU @ 2.50GHz × 4 <br/>
+**os**             : Ubuntu 18.04.4 LTS 64-bit <br/>
+**compiler** : g++ 7.5.0 <br/>
+**compile** : g++ -O2 -std=c++17 -Wpedantic -Wall -Wextra -Werror <br/>
+**method**  : clock() function from time.h <br/>
 
 
 
@@ -84,7 +84,8 @@ note:
 - vector (reserve) speed sometimes is slower than empty vector, this proves two things:
   1. reserving space in vector brings (alsolutely) no speed benefit in random insert.
   2. there's always some minor difference between tests we run each time (some seconds may seem large but in total serveral minutes, it's very small)
-
+<br/>
+<br/>
 **2. MULTIPLE INSERT**
 
 ​		value = 0xCAFE
@@ -101,9 +102,8 @@ note:
 | vector (reserve) | 2.97349 [0]         | 12.9776 [0]         | 30.302 [0]           | 143.871 [0]          | 319.164 [0]          | 504.786 [0]           |
 
 note: same as single insert
-
-
-
+<br/>
+<br/>
 **3. SINGLE DELETE**
 
 ​		value = 0xDEAD
@@ -118,9 +118,8 @@ note: same as single insert
 | deque     | 1.17304     | 14.9224     | 47.7632     | 106.662     | 199.657     | 316.666       |
 
 note: this test is obvious. sda moves smaller amount of elements, it also benifits from its contiguous memory layout.
-
-
-
+<br/>
+<br/>
 **4. RANGE DELETE**
 
 ​		value = 0xBA5E
@@ -136,9 +135,8 @@ note: this test is obvious. sda moves smaller amount of elements, it also benifi
 | deque     | 1.97567       | 16.2194       | 26.4846       | 38.0789       | 54.4921        | 94.9902        |
 
 *ratio = random_range.size / current_array.size : delete a random range has size equals to *ratio* of current array's size (range maybe empty)
-
-
-
+<br/>
+<br/>
 **5. PUSH BACK**
 
 ​		value = 0x50DA
@@ -152,9 +150,8 @@ note: this test is obvious. sda moves smaller amount of elements, it also benifi
 | vector (reserve)   | 0.299035 [0]          | 0.468497 [0]           | 0.593812 [0]         | 0.736835 [0]         | 0.880434 [0]          |
 
 note: sda uses default growth formula, so (obviously) pushing elements into it is slower (1.25 vs 2)
-
-
-
+<br/>
+<br/>
 **6. PUSH FRONT**
 
 ​		value = 0x50FA
@@ -166,9 +163,8 @@ note: sda uses default growth formula, so (obviously) pushing elements into it i
 | sda (reserve_front) | 0.359113 [0]         | 0.529735 [0]        | 0.726702 [0]        | 0.901044 [0]         | 1.04793 [0]          |
 
 note: same as **PUSH BACK**
-
-
-
+<br/>
+<br/>
 **7. POP BACK**
 
 ​		value = 0xD1CE
@@ -178,9 +174,8 @@ note: same as **PUSH BACK**
 | sda    | 0.000002    | 0.000001    | 0.000001    | 0.000002    | 0.000003    |
 | vector | 0.000002    | 0.000001    | 0.000002    | 0.000002    | 0.000002    |
 | deque  | 0.210624    | 0.316784    | 0.423526    | 0.527724    | 0.63352     |
-
-
-
+<br/>
+<br/>
 **8. POP FRONT**
 
 ​		value = 0x5EED
@@ -189,9 +184,8 @@ note: same as **PUSH BACK**
 | ----- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | sda   | 0.000001    | 0.000002    | 0.000003    | 0.000003    | 0.000003    |
 | deque | 0.228291    | 0.342578    | 0.456481    | 0.571723    | 0.686627    |
-
-
-
+<br/>
+<br/>
 **9. ACCESS and ASSIGN**
 
 ​		value = 0xFEED
