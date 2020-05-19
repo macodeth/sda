@@ -33,23 +33,9 @@ This picture below will explain general concepts of this data structure:
    ![](./image/insert.png)
 <br/>
 <br/>
-3. **FLEXIBLE GROWTH FORMULA**
 
-   Two growth formulas can be changed any time. 
-   
-   This allows us to use **SDA** effectively if we know about our data's distribution
-   
-   **eg**: If insertion mainly takes place at the beginning:
-   
-   - increase front growth rate
-   - decrease back growth rate
-   
-   (and vice versa)
 
-<br/>
-<br/>
-
-4. **SYMMETRIC DATA STRUCTURE**
+3. **SYMMETRIC DATA STRUCTURE**
 
    This data structure is symmetric, because operations at position *p* are as fast as operations at position *(size - p)*
 
