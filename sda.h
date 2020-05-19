@@ -85,12 +85,6 @@ class sda
       pointer begin_;
       pointer end_;
 
-      // custom growth formula's parameters
-      double front_growth_rate = 0;
-      double back_growth_rate = 0;
-      double front_growth_extra = 0;
-      double back_growth_extra = 0;
-
       Impl() : Allocator(), head_(nullptr), tail_(nullptr), begin_(nullptr), end_(nullptr) {}
 
       Impl(const allocator_type& alloc) : Allocator(alloc), head_(nullptr), tail_(nullptr), begin_(nullptr), end_(nullptr) {}
@@ -128,16 +122,12 @@ class sda
       size_type new_capacity_front_growing()
       {
          size_type front_capacity = end_ - head_;
-         if(front_growth_rate <= 1)
-            return tail_ - end_ + front_capacity + (front_capacity >> 2) + 2;
-         else return tail_ - end_ + front_capacity * front_growth_rate + front_growth_extra;
+         return tail_ - end_ + front_capacity + (front_capacity >> 2) + 2;
       }
       size_type new_capacity_back_growing()
       {
          size_type back_capacity = tail_ - begin_;
-         if(back_growth_rate <= 1)
-            return begin_ - head_ + back_capacity + (back_capacity >> 2) + 2;
-         else return begin_ - head_ + back_capacity * back_growth_rate + back_growth_extra;
+         return begin_ - head_ + back_capacity + (back_capacity >> 2) + 2;
       }
       pointer balance_begin(pointer head, size_type size, size_type capacity)
       {
