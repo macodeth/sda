@@ -1158,27 +1158,6 @@ class sda
    {
       swap(impl_, other.impl_);
    }
-   //----------------------------------------
-   //    CHANGE GROWTH FORMULA
-   //    requirement:  rate > 1, extra >= 1
-   //----------------------------------------
-   void set_front_growth_formula(double rate, double extra)
-   {
-      impl_.front_growth_rate = rate;
-      impl_.front_growth_extra = extra;
-   }
-   void set_back_growth_formula(double rate, double extra)
-   {
-      impl_.back_growth_rate = rate;
-      impl_.back_growth_extra = extra;
-   }
-   void reset_growth_formula()
-   {
-      impl_.front_growth_rate = 0;
-      impl_.front_growth_extra = 0;
-      impl_.back_growth_rate = 0;
-      impl_.back_growth_extra = 0;
-   }
 };
 
 
