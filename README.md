@@ -102,13 +102,5 @@ Author: Than Minh Duy
 
 Contact: duythan@protonmail.com
 
-
-
-#### NOTE:
-
-This library is in development (need more testing, documentation, refactoring, ...). All functions are complete. I can only guarantee it work correctly with primitive data types (see **/test/check_result.cpp**)
-
-
-
    
 
