@@ -197,11 +197,3 @@ allocator_type get_allocator() const
 
 
 
-### FORMULA
-
-```c++
-void set_front_growth_formula(double rate, double extra)
-void set_back_growth_formula(double rate, double extra)
-void reset_growth_formula()
-```
-
